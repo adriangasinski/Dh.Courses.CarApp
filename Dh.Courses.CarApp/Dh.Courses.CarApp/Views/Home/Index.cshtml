@@ -1,0 +1,15 @@
+﻿@model Dh.Courses.CarApp.ViewModels.HomeVM
+
+<h1>@Model.Title</h1>
+
+@foreach (var car in Model.Cars)
+{
+    <div>
+        <h2>@car.Company</h2>
+        <h2>@car.Model</h2>
+        <h3>@car.ProductionYear</h3>
+        <h5>@car.Price.ToString("c")</h5>
+        <p>@car.Description</p>
+
+    </div>
+}
