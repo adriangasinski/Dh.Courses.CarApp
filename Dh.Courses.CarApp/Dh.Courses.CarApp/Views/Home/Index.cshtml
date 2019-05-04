@@ -1,15 +1,26 @@
 ﻿@model Dh.Courses.CarApp.ViewModels.HomeVM
 
-<h1>@Model.Title</h1>
 
-@foreach (var car in Model.Cars)
-{
-    <div>
-        <h2>@car.Company</h2>
-        <h2>@car.Model</h2>
-        <h3>@car.ProductionYear</h3>
-        <h5>@car.Price.ToString("c")</h5>
-        <p>@car.Description</p>
-
-    </div>
-}
+<div class="row">
+    <h1>@Model.Title</h1>
+</div>
+<div class="row">
+    @foreach (var car in Model.Cars)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="img-thumbnail car-thumbnail">
+                <img src="@car.ThumbnailURL" alt="car thumbnail" />
+                <div>
+                    <h3>@car.Price.ToString("c")</h3>
+                    <h3>
+                        @car.Company - @car.Model  - @car.ProductionYear.ToString()
+                    </h3>
+                    <h4>
+                        Przebieg: @car.Mileage
+                    </h4>
+                    <p>@car.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

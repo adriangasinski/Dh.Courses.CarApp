@@ -1,0 +1,13 @@
+﻿body {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.body-content{
+    padding: 0 10px;
+}
+
+.car-thumbnail img{
+    width:100%;
+    height:auto;
+}
